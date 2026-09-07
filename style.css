@@ -1,0 +1,963 @@
+/* ============================================
+   🌹 100 ROSAS — 4 AÑOS DE NOSOTROS
+   style.css — FASE 2 CORREGIDA
+   Mobile First (375px base)
+   ============================================ */
+
+/* ---------- VARIABLES CSS ---------- */
+:root {
+    --color-crema: #FAF6F0;
+    --color-blanco: #FFFFFF;
+    --color-negro: #1A1A1A;
+    --color-vino: #6B1F2A;
+    --color-vino-oscuro: #4A1520;
+    --color-rosa-palido: #F5E6E0;
+    --color-dorado: #C9A96E;
+
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+
+    --transition-suave: 0.3s ease;
+    --border-radius-boton: 50px;
+    --border-radius-tarjeta: 15px;
+    --sombra-suave: 0 4px 15px rgba(0,0,0,0.05);
+    --sombra-media: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+/* ---------- RESET BÁSICO Y SCROLL SUAVE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    color: var(--color-negro);
+    background-color: var(--color-crema);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- TIPOGRAFÍA GENERAL ---------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-vino);
+}
+
+p {
+    font-family: var(--font-sans);
+    font-weight: 300;
+}
+
+.titulo-seccion {
+    font-size: clamp(2rem, 8vw, 3rem);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+/* ---------- CONTENEDORES ---------- */
+.contenedor {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.contenedor-centrado {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+/* ============================================
+   SECCIÓN 1 — HERO
+   ============================================ */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background-color: var(--color-vino-oscuro);
+    /* background-image: url('images/foto-hero.jpg'); */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(26, 26, 26, 0.4) 0%,
+        rgba(74, 21, 32, 0.6) 100%
+    );
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 600px;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.8rem, 15vw, 5rem);
+    color: var(--color-blanco);
+    letter-spacing: 0.05em;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 6vw, 2rem);
+    color: var(--color-dorado);
+    font-weight: 500;
+}
+
+.hero-quote {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    color: var(--color-blanco);
+    opacity: 0.9;
+    max-width: 450px;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+}
+
+/* ---------- BOTONES ---------- */
+.btn {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: var(--border-radius-boton);
+    cursor: pointer;
+    transition: all var(--transition-suave);
+    text-decoration: none;
+    text-align: center;
+    background: none;
+    color: inherit;
+}
+
+.btn-primary {
+    background-color: var(--color-vino);
+    color: var(--color-blanco);
+    box-shadow: var(--sombra-media);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-vino-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(107, 31, 42, 0.25);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* ============================================
+   SECCIÓN 2 — ANTES DE CONTINUAR
+   ============================================ */
+.seccion-intro {
+    background-color: var(--color-crema);
+    text-align: center;
+}
+
+.seccion-intro h2 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    margin-bottom: 1.5rem;
+}
+
+.seccion-intro p {
+    font-size: 1rem;
+    max-width: 500px;
+    margin: 0 auto 1rem;
+    color: var(--color-negro);
+    opacity: 0.85;
+}
+
+.seccion-intro .btn {
+    margin-top: 1.5rem;
+}
+
+/* ============================================
+   SECCIÓN 3 — LÍNEA DE TIEMPO
+   ============================================ */
+.seccion-historia {
+    background-color: var(--color-blanco);
+}
+
+.seccion-historia .contenedor {
+    max-width: 700px;
+    position: relative;
+}
+
+/* Línea vertical central (mobile: a la izquierda) */
+.seccion-historia .contenedor::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--color-dorado);
+    opacity: 0.4;
+}
+
+.linea-item {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 2.5rem;
+}
+
+.linea-item:last-of-type {
+    margin-bottom: 2rem;
+}
+
+/* Punto en la línea */
+.linea-item::before {
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--color-vino);
+    border: 3px solid var(--color-dorado);
+}
+
+.linea-contenido {
+    background-color: var(--color-crema);
+    border-radius: var(--border-radius-tarjeta);
+    padding: 1.5rem;
+    box-shadow: var(--sombra-suave);
+}
+
+.linea-anio {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-vino);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+}
+
+.linea-titulo {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--color-vino-oscuro);
+    margin-bottom: 0.5rem;
+}
+
+.linea-frase {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--color-negro);
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.linea-fotos {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.linea-foto {
+    width: 100%;
+    max-width: calc(50% - 0.4rem);
+    border-radius: 8px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background-color: var(--color-rosa-palido);
+}
+
+/* Cierre */
+.linea-cierre {
+    text-align: center;
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    font-weight: 600;
+    color: var(--color-vino);
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--color-dorado);
+    opacity: 0.8;
+}
+
+/* ============================================
+   SECCIÓN 4 — LAS 100 ROSAS
+   ============================================ */
+.seccion-rosas {
+    background-color: var(--color-rosa-palido);
+}
+
+.contador-rosas {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-vino);
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.rosas-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);  /* Mobile: 5 columnas */
+    gap: 0.6rem;
+    justify-items: center;
+}
+
+.rosa-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--color-vino);
+    color: var(--color-blanco);
+    border: 2px solid var(--color-dorado);
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all var(--transition-suave);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.rosa-btn:hover {
+    background-color: var(--color-vino-oscuro);
+    transform: scale(1.1);
+}
+
+.rosa-btn.visitada {
+    background-color: var(--color-dorado);
+    border-color: var(--color-blanco);
+    color: var(--color-vino-oscuro);
+}
+
+/* ============================================
+   MODAL (para las rosas)
+   ============================================ */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none; /* Se muestra con JS */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 1rem;
+}
+
+.modal.abierto {
+    display: flex;
+}
+
+.modal-contenido {
+    background-color: var(--color-blanco);
+    border-radius: var(--border-radius-tarjeta);
+    max-width: 90vw;
+    width: 500px;
+    padding: 2rem;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    animation: scaleIn 0.3s ease-out;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--color-vino);
+    background: none;
+    border: none;
+    font-family: var(--font-sans);
+    transition: color var(--transition-suave);
+    line-height: 1;
+}
+
+.modal-cerrar:hover {
+    color: var(--color-vino-oscuro);
+}
+
+.modal-numero {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-dorado);
+    margin-bottom: 0.5rem;
+}
+
+.modal-texto {
+    font-size: 1.1rem;
+    color: var(--color-negro);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.modal-cerrar-btn {
+    background-color: var(--color-vino);
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.7rem 1.8rem;
+    border-radius: var(--border-radius-boton);
+    font-family: var(--font-sans);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background var(--transition-suave);
+}
+
+.modal-cerrar-btn:hover {
+    background-color: var(--color-vino-oscuro);
+}
+
+/* ============================================
+   SECCIÓN 5 — 100 COSAS QUE AMO
+   ============================================ */
+.seccion-cosas {
+    background-color: var(--color-blanco);
+}
+
+.cosas-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: 1 columna */
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.cosa-tarjeta {
+    background-color: var(--color-crema);
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    box-shadow: var(--sombra-suave);
+    font-size: 0.95rem;
+    transition: transform var(--transition-suave);
+}
+
+.cosa-tarjeta:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-media);
+}
+
+/* ============================================
+   SECCIÓN 6 — GALERÍA
+   ============================================ */
+.seccion-galeria {
+    background-color: var(--color-crema);
+}
+
+.galeria-categoria {
+    margin-bottom: 2.5rem;
+}
+
+.galeria-subtitulo {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-vino);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Mobile: 2 columnas */
+    gap: 0.8rem;
+}
+
+.galeria-item {
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+    cursor: pointer;
+    transition: transform var(--transition-suave);
+}
+
+.galeria-item:hover {
+    transform: scale(1.02);
+}
+
+.galeria-foto {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background-color: var(--color-rosa-palido);
+    display: block;
+}
+
+.galeria-item figcaption {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
+    text-align: center;
+    color: var(--color-vino-oscuro);
+    font-weight: 400;
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background-color: rgba(0,0,0,0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.lightbox.abierto {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.lightbox-cerrar {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 2.5rem;
+    color: var(--color-blanco);
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: color var(--transition-suave);
+}
+
+.lightbox-cerrar:hover {
+    color: var(--color-dorado);
+}
+
+/* ============================================
+   SECCIÓN 7 — LA CANCIÓN
+   ============================================ */
+.seccion-cancion {
+    background-color: var(--color-blanco);
+}
+
+.btn-reproductor {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    background-color: var(--color-vino);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-suave);
+    box-shadow: var(--sombra-media);
+    margin: 1.5rem 0;
+}
+
+.btn-reproductor:hover {
+    background-color: var(--color-vino-oscuro);
+    transform: translateY(-2px);
+}
+
+.btn-reproductor.reproduciendo {
+    background-color: var(--color-dorado);
+    color: var(--color-vino-oscuro);
+}
+
+#icono-musica {
+    font-size: 1.2rem;
+}
+
+/* ============================================
+   SECCIÓN 8 — LA CARTA FINAL
+   ============================================ */
+.seccion-carta {
+    background-color: var(--color-crema);
+    /* Textura de papel sutil */
+    background-image: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            rgba(201, 169, 110, 0.03) 10px,
+            rgba(201, 169, 110, 0.03) 20px
+        );
+}
+
+.carta-contenedor {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.carta-titulo {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 8vw, 3.5rem);
+    color: var(--color-vino);
+    margin-bottom: 2rem;
+}
+
+.carta-texto {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--color-negro);
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto 2.5rem;
+}
+
+.carta-texto p {
+    margin-bottom: 1.5rem;
+    font-family: var(--font-serif);
+    font-weight: 400;
+}
+
+.carta-firma {
+    font-style: italic;
+    font-weight: 600;
+    margin-top: 2rem;
+    text-align: right;
+    color: var(--color-vino);
+}
+
+.carta-rosas-final {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    color: var(--color-dorado);
+    font-size: 1.1rem;
+}
+
+#btn-abrir-final {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* ============================================
+   SECCIÓN EXTRA — PRÓXIMO CAPÍTULO
+   ============================================ */
+.seccion-proximo {
+    background-color: var(--color-blanco);
+}
+
+.seccion-proximo .contenedor-centrado {
+    text-align: center;
+}
+
+.seccion-proximo h2 {
+    font-size: clamp(2rem, 7vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.seccion-proximo h3 {
+    font-size: 1.6rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-vino);
+}
+
+.lista-proximo {
+    list-style: none;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.lista-proximo li {
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+    font-weight: 400;
+}
+
+.check-proximo {
+    margin-right: 0.8rem;
+    accent-color: var(--color-vino);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.continuara {
+    margin-top: 2.5rem;
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--color-vino);
+    font-weight: 600;
+}
+
+.elipsis {
+    animation: elipsisAnim 1.5s infinite;
+}
+
+@keyframes elipsisAnim {
+    0% { content: '…'; }
+    25% { content: '.'; }
+    50% { content: '…'; }
+    75% { content: '..'; }
+    100% { content: '…'; }
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background-color: var(--color-vino-oscuro);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* ============================================
+   ANIMACIONES (Keyframes)
+   ============================================ */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes petaloCaida {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0.6;
+    }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* ---------- CLASES PARA ANIMACIONES (CORREGIDAS) ---------- */
+/* Ahora los elementos son visibles por defecto; la clase .visible solo activa
+   una transición suave si se desea, pero no es necesaria para ver el contenido. */
+.fade-in,
+.fade-in-up {
+    opacity: 1;          /* Antes era 0: ahora visible */
+    transform: none;     /* Sin desplazamiento inicial */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible,
+.fade-in-up.visible {
+    /* No se requiere ningún cambio; se mantiene visible.
+       Si se quiere animar, se podría añadir una animación de opacidad
+       pero es opcional y no bloquea la visualización. */
+    opacity: 1;
+    transform: none;
+}
+
+/* ---------- PÉTALOS (para JS) ---------- */
+.petalo {
+    position: fixed;
+    top: -10vh;
+    z-index: 999;
+    pointer-events: none;
+    animation: petaloCaida 4s linear forwards;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #c0392b, #6B1F2A);
+    opacity: 0.7;
+}
+
+/* ============================================
+   RESPONSIVE — TABLET (768px+)
+   ============================================ */
+@media (min-width: 768px) {
+    .contenedor,
+    .contenedor-centrado {
+        max-width: 700px;
+        padding: 4rem 0;
+    }
+
+    .seccion-historia .contenedor::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .linea-item {
+        padding-left: 0;
+        width: 50%;
+        margin-bottom: 3rem;
+    }
+
+    .linea-item:nth-child(odd) {
+        padding-right: 2.5rem;
+        text-align: right;
+        margin-left: 0;
+    }
+
+    .linea-item:nth-child(even) {
+        padding-left: 2.5rem;
+        text-align: left;
+        margin-left: 50%;
+    }
+
+    .linea-item::before {
+        left: auto;
+        right: -8px;
+        top: 8px;
+    }
+
+    .linea-item:nth-child(even)::before {
+        left: -8px;
+        right: auto;
+    }
+
+    .linea-fotos {
+        justify-content: center;
+    }
+
+    .rosas-grid {
+        grid-template-columns: repeat(7, 1fr); /* Tablet: 7 columnas */
+        gap: 0.8rem;
+    }
+
+    .rosa-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 0.85rem;
+    }
+
+    .cosas-grid {
+        grid-template-columns: repeat(2, 1fr); /* Tablet: 2 columnas */
+        gap: 1rem;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(3, 1fr); /* Tablet: 3 columnas */
+        gap: 1rem;
+    }
+
+    .modal-contenido {
+        max-width: 500px;
+        padding: 2.5rem;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — DESKTOP (1024px+)
+   ============================================ */
+@media (min-width: 1024px) {
+    .contenedor,
+    .contenedor-centrado {
+        max-width: 900px;
+        padding: 5rem 0;
+    }
+
+    .rosas-grid {
+        grid-template-columns: repeat(10, 1fr); /* Desktop: 10 columnas */
+        gap: 0.9rem;
+    }
+
+    .rosa-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 0.9rem;
+    }
+
+    .cosas-grid {
+        grid-template-columns: repeat(3, 1fr); /* Desktop: 3 columnas */
+        gap: 1.2rem;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(4, 1fr); /* Desktop: 4 columnas */
+        gap: 1.2rem;
+    }
+
+    .carta-contenedor {
+        max-width: 700px;
+    }
+
+    .modal-contenido {
+        max-width: 550px;
+    }
+}
+
+/* ============================================
+   AJUSTES FINOS PARA PANTALLAS MUY PEQUEÑAS
+   ============================================ */
+@media (max-width: 350px) {
+    .rosas-grid {
+        gap: 0.4rem;
+    }
+    .rosa-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.7rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}

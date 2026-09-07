@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 Rosas — 4 Años de Nosotros</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Archivos externos -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- ===== SECCIÓN 1: PANTALLA DE INICIO (HERO) ===== -->
+    <header id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-in">100 ROSAS</h1>
+            <p class="hero-subtitle fade-in">4 años de nosotros</p>
+            <blockquote class="hero-quote fade-in">
+                "Hay historias que empiezan con un momento.<br>
+                La nuestra lleva cuatro años escribiéndose."
+            </blockquote>
+            <button class="btn btn-primary fade-in" data-target="#antes" aria-label="Abrir mi regalo">
+                ABRIR MI REGALO →
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== SECCIÓN 2: ANTES DE CONTINUAR ===== -->
+        <section id="antes" class="seccion seccion-intro">
+            <div class="contenedor-centrado">
+                <h2 class="fade-in">No hice esto para darte otro regalo.</h2>
+                <p class="fade-in">Lo hice porque después de cuatro años hay demasiadas cosas que quiero decirte y que a veces no sé cómo decirte en persona.</p>
+                <p class="fade-in">Así que decidí guardarlas aquí.</p>
+                <button class="btn btn-primary fade-in" data-target="#historia" aria-label="Quiero verlo">
+                    QUIERO VERLO
+                </button>
+            </div>
+        </section>
+
+        <!-- ===== SECCIÓN 3: NUESTRA HISTORIA (LÍNEA DE TIEMPO) ===== -->
+        <section id="historia" class="seccion seccion-historia">
+            <div class="contenedor">
+                <h2 class="titulo-seccion fade-in">Nuestra Historia</h2>
+
+                <!-- 2022 -->
+                <article class="linea-item fade-in">
+                    <div class="linea-contenido">
+                        <h3 class="linea-anio">2022</h3>
+                        <h4 class="linea-titulo">El comienzo</h4>
+                        <p class="linea-frase">"Aquí empezó algo que ninguno de los dos sabía hasta dónde iba a llegar."</p>
+                        <div class="linea-fotos">
+                            <!-- REEMPLAZAR: Foto de 2022 -->
+                            <img src="images/22.jpeg" alt="Nosotros en 2022" class="linea-foto">
+                            <img src="images/22-2.jpeg" alt="Otro momento de 2022" class="linea-foto">
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2023 -->
+                <article class="linea-item fade-in">
+                    <div class="linea-contenido">
+                        <h3 class="linea-anio">2023</h3>
+                        <h4 class="linea-titulo">Aprendiendo a querernos</h4>
+                        <p class="linea-frase">Aqui a prendi a quererte cada dia mas </p>
+                        <div class="linea-fotos">
+                            <!-- REEMPLAZAR: Fotos de 2023 -->
+                            <img src="images/23.jpeg" alt="Recuerdo de 2023" class="linea-foto">
+                            <img src="images/23-3.jpeg" alt="Otro recuerdo de 2023" class="linea-foto">
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2024 -->
+                <article class="linea-item fade-in">
+                    <div class="linea-contenido">
+                        <h3 class="linea-anio">2024</h3>
+                        <h4 class="linea-titulo">Todo lo que construimos</h4>
+                        <p class="linea-frase">Aqui aprendi a amarte</p>
+                        <div class="linea-fotos">
+                            <!-- REEMPLAZAR: Fotos de 2024 -->
+                            <img src="images/24.jpeg" alt="Momento especial de 2024" class="linea-foto">
+                            <img src="images/24-4.jpeg" alt="Otro momento de 2024" class="linea-foto">
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2025 -->
+                <article class="linea-item fade-in">
+                    <div class="linea-contenido">
+                        <h3 class="linea-anio">2025</h3>
+                        <h4 class="linea-titulo">Un año más contigo</h4>
+                        <p class="linea-frase">Una aventura unica </p>
+                        <div class="linea-fotos">
+                            <!-- REEMPLAZAR: Fotos de 2025 -->
+                            <img src="images/25.jpeg" alt="Recuerdo de 2025" class="linea-foto">
+                            <img src="images/25-5.jpeg" alt="Otro recuerdo de 2025" class="linea-foto">
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2026 -->
+                <article class="linea-item fade-in">
+                    <div class="linea-contenido">
+                        <h3 class="linea-anio">2026</h3>
+                        <h4 class="linea-titulo">Y aquí estamos…</h4>
+                        <div class="linea-fotos">
+                            <!-- REEMPLAZAR: Foto reciente -->
+                            <img src="images/2026.jpeg" alt="Foto reciente de nosotros" class="linea-foto">
+                        </div>
+                    </div>
+                </article>
+
+                <p class="linea-cierre fade-in">4 años después, sigo escogiendo tu mano.</p>
+            </div>
+        </section>
+
+        <!-- ===== SECCIÓN 4: LAS 100 ROSAS (INTERACTIVA) ===== -->
+        <section id="rosas" class="seccion seccion-rosas">
+            <div class="contenedor">
+                <h2 class="titulo-seccion fade-in">🌹 100 ROSAS</h2>
+                <p id="contador-rosas" class="contador-rosas fade-in">0/100 rosas visitadas</p>
+                <!-- El grid se genera dinámicamente con JavaScript -->
+                <div id="rosas-grid" class="rosas-grid fade-in"></div>
+            </div>
+        </section>
+
+        <!-- Modal para cada rosa (vacío, se llena con JS) -->
+        <div id="modal-rosa" class="modal"></div>
+
+        <!-- ===== SECCIÓN 5: 100 COSAS QUE AMO DE TI ===== -->
+        <section id="cosas-que-amo" class="seccion seccion-cosas">
+            <div class="contenedor">
+                <h2 class="titulo-seccion fade-in">100 cosas que amo de ti</h2>
+                <!-- La lista se genera dinámicamente con JavaScript -->
+                <div id="cosas-grid" class="cosas-grid fade-in"></div>
+            </div>
+        </section>
+
+        <!-- ===== SECCIÓN 7: LA CANCIÓN ===== -->
+        <section id="cancion" class="seccion seccion-cancion">
+            <div class="contenedor-centrado">
+                <h2 class="fade-in">Esta canción me recuerda a ti.</h2>
+                <a href="https://open.spotify.com/intl-es/track/7DUh5iszvXQDhhE0ZEtmUe?si=72267a439dc744f1" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn-reproductor fade-in" 
+                   id="btn-spotify">
+                    <span>▶</span> ESCUCHAR 
+                </a>
+                <p class="fade-in">"Escúchala mientras sigues leyendo."</p>
+            </div>
+        </section>
+
+        <!-- ===== SECCIÓN 8: LA CARTA FINAL ===== -->
+        <section id="carta" class="seccion seccion-carta">
+            <div class="carta-contenedor fade-in">
+                <h2 class="carta-titulo">Para ti, mi amor</h2>
+                <div class="carta-texto">
+                    <!-- Aquí va tu carta personal (la que pegaste antes) -->
+                    <p>Mi amor:</p>
+
+                    <p>No sé exactamente cómo empezar esta carta, porque hay cosas que siento por ti que a veces no sé explicar con palabras. Y quizá después de cuatro años debería saber hacerlo mejor, pero justamente por eso quiero escribirte esto: sin intentar que suene perfecto, sin esconder mis errores y sin pretender ser alguien que no soy.</p>
+
+                    <p>Solo quiero hablarte desde el corazón.</p>
+
+                    <p>Hoy, mientras pienso en todo lo que hemos vivido, me doy cuenta de que nuestra historia ha sido mucho más grande que todos los momentos bonitos que cualquiera podría ver desde afuera. Hemos tenido días en los que todo parecía perfecto, pero también hemos tenido días difíciles, discusiones, diferencias, silencios, momentos en los que nos hemos lastimado y momentos en los que probablemente te preguntaste si yo realmente estaba entendiendo el valor de tenerte a mi lado.</p>
+
+                    <p>Y quiero comenzar diciéndote algo que quizá debí decirte muchas veces antes:</p>
+
+                    <p><strong>Perdóname.</strong></p>
+
+                    <p>Perdóname por todas las veces que fui tonto.</p>
+                    <p>Por las veces que no supe escucharte.</p>
+                    <p>Por las veces que pude haber sido más paciente y no lo fui.</p>
+                    <p>Por aquellas ocasiones en las que mis palabras, mis decisiones o mis actitudes te hicieron sentir mal.</p>
+                    <p>Por las veces que no valoré un momento contigo como debía.</p>
+                    <p>Por mis errores, por mis inmadureces, por mi orgullo y por todas esas cosas que hoy, viéndolas desde la distancia, quisiera haber hecho diferente.</p>
+
+                    <p>No quiero pedirte perdón solamente porque es tu cumpleaños. Quiero hacerlo porque después de cuatro años he aprendido que amar a alguien no significa nunca equivocarse.</p>
+
+                    <p>Significa también tener el valor de reconocer cuando uno se equivoca.</p>
+
+                    <p>Y yo sé que me he equivocado.</p>
+
+                    <p>Sé que no siempre fui el hombre que merecías en cada momento. Sé que hubo ocasiones en las que pude amarte mejor, cuidarte mejor, entenderte mejor y demostrarte mejor todo lo que significas para mí.</p>
+
+                    <p>Y lo siento.</p>
+
+                    <p>De verdad lo siento.</p>
+
+                    <p>Pero también quiero que sepas algo:</p>
+
+                    <p><strong>A pesar de todos mis errores, nunca dejé de agradecerle a la vida por haberte puesto en mi camino.</strong></p>
+
+                    <p>Porque tú has estado ahí.</p>
+                    <p>En mis días buenos y en mis días malos.</p>
+                    <p>Cuando todo salía bien y cuando las cosas se complicaban.</p>
+                    <p>Cuando tenía motivos para sonreír y cuando necesitaba simplemente a alguien que se quedara a mi lado.</p>
+
+                    <p>Gracias por tu paciencia.</p>
+                    <p>Gracias por escucharme.</p>
+                    <p>Gracias por apoyarme.</p>
+                    <p>Gracias por creer en mí incluso en momentos en los que quizá yo mismo no sabía cómo creer en mí.</p>
+
+                    <p>Gracias por cada abrazo.</p>
+                    <p>Por cada conversación.</p>
+                    <p>Por cada risa.</p>
+                    <p>Por cada preocupación.</p>
+                    <p>Por cada detalle pequeño que quizás tú hiciste sin pensar demasiado y que para mí terminó significando muchísimo.</p>
+
+                    <p>Gracias por todas las veces que me preguntaste si estaba bien.</p>
+
+                    <p>Gracias por estar.</p>
+
+                    <p>Porque muchas veces creemos que el amor está solamente en los grandes momentos, pero con los años he aprendido que también está en las cosas pequeñas.</p>
+
+                    <p>En quedarse.</p>
+                    <p>En preguntar.</p>
+                    <p>En esperar.</p>
+                    <p>En perdonar.</p>
+                    <p>En compartir un silencio.</p>
+                    <p>En reírse por una tontería.</p>
+                    <p>En conocer las partes bonitas y también las partes difíciles del otro y, aun así, decidir seguir caminando juntos.</p>
+
+                    <p>Y eso es algo que jamás quiero dar por sentado contigo.</p>
+
+                    <hr>
+
+                    <p>A veces pienso en nosotros y recuerdo las palabras del <strong>Cantar de los Cantares</strong>.</p>
+
+                    <p>Ese libro habla de un amor que mira al otro con admiración, que lo busca, que lo desea, que celebra su presencia y que no tiene miedo de decir:</p>
+
+                    <p><strong>“Mi amado es mío y yo soy suya.”</strong></p>
+
+                    <p>Y cuando pienso en ti, entiendo un poquito más esas palabras.</p>
+
+                    <p>Porque después de cuatro años no solamente amo a la mujer de la que me enamoré al principio.</p>
+
+                    <p>Amo también a la mujer que he conocido con el tiempo.</p>
+                    <p>La que ha compartido conmigo días maravillosos y días complicados.</p>
+                    <p>La que me ha visto en mis mejores momentos y también en aquellos en los que no fui mi mejor versión.</p>
+                    <p>La que conoce mis defectos y aun así ha decidido quedarse.</p>
+
+                    <p>Y quizá eso es lo que más valoro.</p>
+
+                    <p>Que nuestro amor no nació solamente de momentos perfectos.</p>
+
+                    <p><strong>Nuestro amor aprendió a existir también en medio de nuestras imperfecciones.</strong></p>
+
+                    <p>Hemos pasado por cosas que alguna vez pensé que serían difíciles de superar.</p>
+                    <p>Hemos tenido días en los que probablemente ninguno de los dos sabía muy bien qué decir.</p>
+                    <p>Pero también hemos tenido momentos que quisiera guardar para siempre.</p>
+
+                    <p>Risas que todavía recuerdo.</p>
+                    <p>Lugares.</p>
+                    <p>Conversaciones.</p>
+                    <p>Abrazos.</p>
+                    <p>Miradas.</p>
+                    <p>Pequeñas aventuras.</p>
+                    <p>Días normales que terminaron siendo especiales simplemente porque estaba contigo.</p>
+
+                    <p>Y todos esos recuerdos forman algo que nadie puede quitarme:</p>
+
+                    <p><strong>nuestra historia.</strong></p>
+
+                    <hr>
+
+                    <p>Si pudiera volver al primer día en que comenzó todo, probablemente no cambiaría el hecho de haberte conocido.</p>
+
+                    <p>Aunque pudiera advertirle a ese yo de hace cuatro años todas las cosas que iba a hacer mal, todos los errores que iba a cometer y todas las veces que iba a ser un tonto...</p>
+
+                    <p>Aun así le diría:</p>
+
+                    <p><strong>“No tengas miedo. Ella vale la pena.”</strong></p>
+
+                    <p>Porque tú vales la pena.</p>
+
+                    <p>Vale la pena aprender.</p>
+                    <p>Vale la pena cambiar.</p>
+                    <p>Vale la pena pedir perdón.</p>
+                    <p>Vale la pena luchar.</p>
+                    <p>Vale la pena seguir construyendo.</p>
+
+                    <p>Y quiero que sepas que no quiero que estas palabras sean solamente bonitas.</p>
+
+                    <p>Quiero que también sean una promesa de mi parte.</p>
+
+                    <p>Quiero aprender de mis errores.</p>
+                    <p>Quiero escucharte más.</p>
+                    <p>Quiero cuidarte más.</p>
+                    <p>Quiero celebrar tus triunfos como si fueran míos.</p>
+                    <p>Quiero estar cuando estés feliz y cuando estés triste.</p>
+                    <p>Quiero ser esa persona a la que puedas acudir cuando necesites hablar, llorar, reír o simplemente sentir que no estás sola.</p>
+
+                    <p>No prometo ser perfecto.</p>
+                    <p>Porque sé que nunca lo voy a ser.</p>
+
+                    <p>Pero sí puedo prometerte que quiero seguir creciendo.</p>
+
+                    <p>Quiero ser mejor para mí, pero también quiero ser mejor para nosotros.</p>
+
+                    <hr>
+
+                    <p>Y ahora que estás cumpliendo un año más de vida, quiero agradecerte por haberme permitido formar parte de estos cuatro años.</p>
+
+                    <p>Cuatro años.</p>
+                    <p>Cuando lo digo parece solamente un número.</p>
+                    <p>Pero detrás de ese número están cientos de días.</p>
+                    <p>Miles de conversaciones.</p>
+                    <p>Momentos buenos.</p>
+                    <p>Momentos malos.</p>
+                    <p>Risas.</p>
+                    <p>Lágrimas.</p>
+                    <p>Discusiones.</p>
+                    <p>Reconciliaciones.</p>
+                    <p>Abrazos.</p>
+                    <p>Besos.</p>
+                    <p>Planes.</p>
+                    <p>Sueños.</p>
+                    <p>Y tantos recuerdos que sería imposible escribirlos todos aquí.</p>
+
+                    <p>Por eso están las rosas.</p>
+
+                    <p><strong>Cien rosas.</strong></p>
+
+                    <p>Durante estos años se han convertido en una tradición, pero esta vez quería que significaran algo diferente.</p>
+
+                    <p>Porque una rosa no puede contar una historia.</p>
+                    <p>Pero cien pueden recordarnos que una historia está hecha de cientos de pequeños momentos.</p>
+
+                    <p>Y si pudiera darte una rosa por cada momento en el que me hiciste sentir amado, probablemente necesitaríamos muchas más.</p>
+                    <p>Si pudiera darte una por cada vez que me ayudaste, necesitaríamos muchas más.</p>
+                    <p>Si pudiera darte una por cada recuerdo que quiero conservar contigo, probablemente no existiría un ramo suficientemente grande.</p>
+
+                    <p>Así que estas cien rosas no son cien razones.</p>
+
+                    <p>Son simplemente cien pequeñas maneras de decirte:</p>
+
+                    <p><strong>Gracias por estos cuatro años.</strong></p>
+
+                    <hr>
+
+                    <p>Y quiero que recuerdes algo.</p>
+
+                    <p>No sé qué nos espera.</p>
+                    <p>No sé dónde estaremos dentro de cinco, diez o veinte años.</p>
+                    <p>No sé cuántas cosas cambiarán.</p>
+                    <p>No sé cuántos caminos tendremos que recorrer.</p>
+
+                    <p>Pero sí sé algo:</p>
+
+                    <p><strong>Hoy te sigo eligiendo.</strong></p>
+
+                    <p>Después de conocer tus virtudes y tus defectos.</p>
+                    <p>Después de conocer mis propios errores.</p>
+                    <p>Después de haber vivido días maravillosos y días difíciles.</p>
+                    <p>Después de cuatro años...</p>
+
+                    <p><strong>te sigo eligiendo.</strong></p>
+
+                    <p>Y espero que la vida nos permita seguir escribiendo nuestra historia.</p>
+
+                    <p>Quiero conocer más lugares contigo.</p>
+                    <p>Quiero descubrir nuevas cosas a tu lado.</p>
+                    <p>Quiero tener más fotografías que algún día podamos mirar y decir:</p>
+
+                    <p>“¿Te acuerdas de ese día?”</p>
+
+                    <p>Quiero celebrar más cumpleaños contigo.</p>
+                    <p>Más aniversarios.</p>
+                    <p>Más viajes.</p>
+                    <p>Más noches hablando de cualquier cosa.</p>
+                    <p>Más mañanas.</p>
+                    <p>Más abrazos.</p>
+                    <p>Más momentos simples.</p>
+                    <p>Más vida.</p>
+
+                    <hr>
+
+                    <p>Cantar de los Cantares dice que <strong>“el amor es fuerte como la muerte”</strong>.</p>
+
+                    <p>Y quizá eso es lo que he aprendido contigo:</p>
+
+                    <p>Que el amor verdadero no se trata de que todo sea perfecto.</p>
+                    <p>Se trata de que, aun cuando aparecen dificultades, existe algo que nos hace querer volver a encontrarnos.</p>
+                    <p>Algo que nos hace querer entendernos.</p>
+                    <p>Algo que nos hace querer quedarnos.</p>
+
+                    <p>Y yo quiero seguir encontrando ese camino contigo.</p>
+
+                    <p>Así que, mi amor...</p>
+
+                    <p>Gracias.</p>
+
+                    <p>Gracias por haberme amado incluso cuando no sabía cómo recibirlo.</p>
+                    <p>Gracias por haberme acompañado.</p>
+                    <p>Gracias por cada oportunidad.</p>
+                    <p>Gracias por cada recuerdo.</p>
+                    <p>Gracias por estos cuatro años.</p>
+
+                    <p>Y perdóname por todo aquello que hice mal.</p>
+
+                    <p>Ojalá algún día pueda mirar hacia atrás y sentir que cada uno de mis errores se convirtió en una oportunidad para aprender a amarte mejor.</p>
+
+                    <p>Porque si hay algo que quiero que tengas claro después de leer esto, es que:</p>
+
+                    <p><strong>Te amo.</strong></p>
+
+                    <p>No solamente por cómo eres cuando todo está bien.</p>
+                    <p>Te amo por la persona que eres.</p>
+                    <p>Por tu corazón.</p>
+                    <p>Por tu manera de querer.</p>
+                    <p>Por tu forma de hacerme sentir acompañado.</p>
+                    <p>Por todo lo que hemos construido.</p>
+                    <p>Y por todo aquello que todavía nos falta construir.</p>
+
+                    <p>Hoy te regalo cien rosas.</p>
+
+                    <p>Pero si algún día me preguntaras qué es lo que realmente quiero regalarte...</p>
+
+                    <p>Te diría que quiero regalarte mi esfuerzo por ser mejor.</p>
+                    <p>Mi tiempo.</p>
+                    <p>Mi compañía.</p>
+                    <p>Mi lealtad.</p>
+                    <p>Mi paciencia.</p>
+                    <p>Mis sueños.</p>
+                    <p>Mis mejores años.</p>
+                    <p>Y, mientras la vida nos permita caminar juntos,</p>
+
+                    <p><strong>mi amor.</strong></p>
+
+                    <p>Feliz cumpleaños, mi amor.</p>
+                    <p>Gracias por estos cuatro años.</p>
+                    <p>Gracias por haber sido parte de mi historia.</p>
+                    <p>Y gracias, sobre todo, por permitirme ser parte de la tuya.</p>
+
+                    <p><strong>Esta historia comenzó hace cuatro años.</strong></p>
+                    <p><strong>Las cien rosas son para celebrar lo que hemos vivido.</strong></p>
+                    <p><strong>Pero la verdadera razón por la que te las doy es porque todavía quiero descubrir contigo todo lo que nos falta vivir.</strong></p>
+
+                    <!-- Líneas finales originales -->
+                    <p>4 años.<br>100 rosas.<br>Miles de recuerdos.<br>Y todavía te elegiría a ti.</p>
+                    <p>Feliz cumpleaños, mi amor. ❤️</p>
+                    <p class="carta-firma">— David</p>
+                    <p class="carta-rosas-final">🌹 100/100</p>
+                </div>
+                <button id="btn-abrir-final" class="btn btn-primary" aria-label="Abrir lo último">
+                    ¿Quieres ver lo último?<br>ABRIR ❤️
+                </button>
+            </div>
+        </section>
+
+        <!-- ===== SECCIÓN EXTRA: NUESTRO PRÓXIMO CAPÍTULO (DESBLOQUEABLE) ===== -->
+        <section id="proximo-capitulo" class="seccion seccion-proximo" hidden>
+            <div class="contenedor-centrado">
+                <h2 class="fade-in">Esto todavía no termina.</h2>
+                <p class="fade-in">Porque este sitio no es solamente para tu cumpleaños.<br>
+                Es para seguir guardando nuestra historia.</p>
+                <h3 class="fade-in">Nuestro próximo capítulo:</h3>
+                <ul class="lista-proximo fade-in">
+                    <li><label><input type="checkbox" class="check-proximo" data-id="1"> Viajar juntos</label></li>
+                    <li><label><input type="checkbox" class="check-proximo" data-id="2"> Conocer</label></li>
+                    <li><label><input type="checkbox" class="check-proximo" data-id="3"> Hacer mil cosas juntos</label></li>
+                    <li><label><input type="checkbox" class="check-proximo" data-id="4"> Celebrar otro aniversario</label></li>
+                    <li><label><input type="checkbox" class="check-proximo" data-id="5"> Tener nuestra próxima aventura</label></li>
+                </ul>
+                <p class="continuara fade-in">Continuará<span class="elipsis">…</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Hecho con ❤️ para ti</p>
+    </footer>
+
+</body>
+</html>
